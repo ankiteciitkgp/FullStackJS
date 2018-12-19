@@ -13,7 +13,6 @@ gulp.task('styles', function(){
         .pipe(cssGlobbing({
             extensions : ['.scss']
         }))
-
         .pipe(sass());
 
 

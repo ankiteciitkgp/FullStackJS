@@ -43,4 +43,4 @@ gulp.task('cloneImages', function(){
         .pipe(gulp.dest('release/img/'));
 });
 
-gulp.task('release', ['buildJS', 'buildCSS', 'buildHTML', 'cloneFonts', 'cloneImages']);
+gulp.task('release', gulp.series('buildJS', 'buildCSS', 'buildHTML', 'cloneFonts', 'cloneImages'));
